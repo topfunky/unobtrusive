@@ -8,12 +8,16 @@ The unobtrusive.js file is yours to edit (or rename). You'll also need to includ
 
 == Usage
 
-  ./script/plugin install git://github.com/topfunky/unobtrusive.git
+  ./script/plugin install git://github.com/dwg/unobtrusive.git
 
   ./script/generate unobtrusive
   
-  <%= javascript_include_tag "lowpro", "date_selector", "unobtrusive" %>
+  <%= javascript_include_tag :unobtrusive %>
 
 == Author
 
 Geoffrey Grosenbach http://peepcode.com
+
+== Contributors
+
+Arni Einarsson
