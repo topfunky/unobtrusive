@@ -2,7 +2,7 @@ class UnobtrusiveGenerator < Rails::Generator::Base
 
   def manifest
     record do |m|
-      javascripts_dir = File.join("public", "javascripts")
+      javascripts_dir = ActionView::Helpers::AssetTagHelper::JAVASCRIPTS_DIR
 
       # Copy files
       Dir[File.dirname(__FILE__) + "/templates/*.js"].each do |template_filename_with_path|
