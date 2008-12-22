@@ -1,3 +1,3 @@
 ActionView::Helpers::AssetTagHelper.register_javascript_expansion(
-  :unobtrusive=>%w(lowpro date_selector draggable inplace_editor unobtrusive)
+  :unobtrusive=>%w(lowpro behaviours/date_selector behaviours/draggable behaviours/inplace_editor unobtrusive)
 )
