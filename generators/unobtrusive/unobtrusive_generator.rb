@@ -9,7 +9,11 @@ class UnobtrusiveGenerator < Rails::Generator::Base
         template_filename = File.basename(template_filename_with_path)
         m.file template_filename, File.join(javascripts_dir, template_filename)
       end
-
+      FileUtils.mkdir_p(File.join(javascripts_dir, 'behaviours'))
+      Dir[File.dirname(__FILE__) + "/templates/behaviours/*.js"].each do |template_filename_with_path|
+        template_filename = File.basename(template_filename_with_path)
+        m.file template_filename, File.join(javascripts_dir, 'behaviours', template_filename)
+      end
     end
   end
 end
