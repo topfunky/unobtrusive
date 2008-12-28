@@ -1,3 +1,3 @@
 ActionView::Helpers::AssetTagHelper.register_javascript_expansion(
-  :unobtrusive=>%w(lowpro behaviours/date_selector behaviours/draggable behaviours/inplace_editor unobtrusive)
+  :unobtrusive=>['lowpro'].concat(Dir.glob(File.join(ActionView::Helpers::AssetTagHelper::JAVASCRIPTS_DIR, 'behaviours', '*.js')).map {|fp| "behaviours/#{File.basename(fp).sub('.js', '')}"}) << 'unobtrusive'
 )
